@@ -293,3 +293,118 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     color: #7d7d7d;
     margin-top: 45px;
 }
+/* pricing section start here */
+.pricing-section{
+    width: 100%;
+}
+.price{
+    width: 31%;
+    height: auto;
+    float: left;
+    margin-right: 2%;
+    margin-bottom: 100px;
+    box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, .1);
+
+}
+
+
+.item-b{
+    padding: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgb(26, 19, 19);
+    transition: .5s;
+}
+.item-b h4{
+    font-size: 20px;
+}
+.item-b h2{
+    font-size: 30px;
+    margin: 30px 0;
+}
+.item-b h2 span{
+    font-size: 20px;
+}
+.item-b p{
+    color: black;
+    font-weight: 300;
+    margin: 20px 0;
+    font-size: 25px;
+}
+
+
+.item{
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.item ul li{
+    list-style: none;
+    color: #767676;
+    margin: 20px 0;
+    font-size: 25px;
+    font-weight: 300;
+}
+.item ul li span{
+    font-size: 25px;
+    color: #6278df;
+    margin-right: 15px;
+}
+.price-btn button{
+    color: #6278df;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: white;
+    border: 1px solid rgb(172, 168, 168);
+    margin-top: 40px;
+    transition: .5s;
+}
+
+
+.price:hover .item-b{
+    background: #6278df;
+    color: white;
+}
+.price:hover .price-btn button{
+    background-color: #6278df;
+    color: hsl(0, 25%, 98%);
+}
+
+/* team-section css start here */
+
+
+.team-title h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.member-img{
+    width: 22%;
+    margin-right: 3%;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, .1);
+    margin-bottom: 100px;
+
+}
+
+.member-img img{
+    max-width: 100%;
+    height: 265px;
+    border-radius: 10px 10px 0 0;
+}
+
+.member-caption{
+    margin-top: 20px;
+
+}
+
+.member-caption h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.member-caption span{
+    color: #767676;
+    font-size: 18px;
+
+}
