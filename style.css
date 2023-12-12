@@ -271,14 +271,11 @@ h1,h2,h3,h4,h5,h6,a,p,span{
 .about-box:hover{
     box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, .4);
 }
-.content-items{}
 .content-items span{
     color: #6278df;
     font-size: 40px;
 }
-.a-icon{
 
-}
 .a-icon span{
     font-size: 50px;
     float: left;
@@ -287,9 +284,7 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     min-height: 121px;
     color: #6278df;
 }
-.c-text{
 
-}
 .c-text h4{
     font-size: 30px;
     font-weight: 500;
