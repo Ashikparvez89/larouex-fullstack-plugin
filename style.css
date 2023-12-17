@@ -269,6 +269,9 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     transition: .4s;
     box-shadow: 2.5px 4.33px 30px 0 rgba(64,87,191,0.2);
 }
+.about-box:nth-child(3){
+    margin-right: 0;
+}
 .about-box:hover{
     box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, .4);
 }
@@ -278,23 +281,29 @@ h1,h2,h3,h4,h5,h6,a,p,span{
 }
 
 .a-icon span{
-    font-size: 50px;
+    font-size: 40px;
     float: left;
-    margin-right: 10px;
-    margin-left: -29px;
-    min-height: 121px;
+    margin-right: 30px;
+    margin-left: -31px;
+    min-height: 122px;
     color: #6278df;
 }
 
 .c-text h4{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 500;
 }
 .c-text p{
     color: #7d7d7d;
-    margin-top: 45px;
+    margin-top: 25px;
+    flex: 20px;
 }
 /* pricing section start here */
+.main-price{
+    background: #f7f9ff;
+    height: 79em;
+    padding: 70px 0;
+}
 .pricing-section{
     width: 100%;
 }
@@ -302,12 +311,15 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     width: 31%;
     height: auto;
     float: left;
-    margin-right: 2%;
+    margin-right: 2.5%;
     margin-bottom: 100px;
-    box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, .1);
+    box-shadow: 2px 2px 3px 4px rgba(223, 213, 213, 0.2);
 
 }
 
+.price:nth-child(3){
+    margin-right: 0;
+}
 
 .item-b{
     padding: 40px;
@@ -319,17 +331,20 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     font-size: 20px;
 }
 .item-b h2{
-    font-size: 30px;
+    font-size: 45px;
     margin: 30px 0;
+    letter-spacing: 5px;
 }
 .item-b h2 span{
     font-size: 20px;
+    letter-spacing: 0;
+    margin-left: 5px;
 }
 .item-b p{
     color: black;
     font-weight: 300;
     margin: 20px 0;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 
@@ -349,6 +364,9 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     font-size: 25px;
     color: #6278df;
     margin-right: 15px;
+    font-weight: bold;
+    width: 30px;
+    height: 35px;
 }
 .price-btn button{
     color: #6278df;
@@ -384,7 +402,7 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     margin-right: 3%;
     padding: 10px;
     box-sizing: border-box;
-    box-shadow: 2px 2px 3px 4px rgba(0, 0, 0, .1);
+    box-shadow: 2.5px 4.33px 30px 0 rgba(64,87,191,0.1);
     margin-bottom: 100px;
 
 }
@@ -627,7 +645,8 @@ h1,h2,h3,h4,h5,h6,a,p,span{
     width: 80px;
 }
 .qt-img{
-    margin-right: 20px;
+    margin-right: 23px;
+    margin-left: -20px;
 }
 .img-q-cap{}
 .img-q-cap h4{
