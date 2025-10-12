@@ -56,7 +56,10 @@ Create file: `~/.claude/marketplaces/local/.claude-plugin/marketplace.json`
 ```json
 {
   "name": "local-dev",
-  "owner": "your-username",
+  "owner": {
+    "name": "Your Name",
+    "url": "https://github.com/yourusername"
+  },
   "description": "Local development marketplace",
   "plugins": [
     {
@@ -68,7 +71,8 @@ Create file: `~/.claude/marketplaces/local/.claude-plugin/marketplace.json`
 ```
 
 **Important:**
-- `owner` is required (use your GitHub username or any identifier)
+- `owner` must be an object with `name` field (required)
+- `owner.url` is optional but recommended
 - `source` must be a relative path starting with `./`
 
 ### Step 3: Add Local Marketplace
