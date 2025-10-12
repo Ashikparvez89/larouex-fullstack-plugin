@@ -36,27 +36,31 @@ Each path includes platform-specific commands, deployment workflows, and best pr
   └── marketplace.json   - Marketplace listing information
 
 .claude/
-  ├── agents/           - 11 specialized AI agents
-  │   ├── frontend-development-agent.md
-  │   ├── azure-serverless-agent.md
-  │   ├── devops-azure-agent.md
-  │   ├── devops-railway-agent.md
-  │   ├── forms-workflow-agent.md
-  │   ├── content-seo-agent.md
-  │   ├── authentication-agent.md
-  │   ├── monitoring-observability-agent.md
-  │   ├── testing-quality-agent.md
-  │   ├── security-production-agent.md
-  │   └── accessibility-compliance-agent.md
-  │
-  └── commands/         - 75 slash commands organized by function
-      ├── scaffold-*.md
-      ├── add-*.md
-      ├── deploy-*.md
-      └── [other commands]
+  └── CLAUDE.md          - This architecture documentation
 
-docs/                   - Plugin documentation
-examples/               - Example projects and templates
+agents/                  - 12 specialized AI agents (at root level)
+  ├── frontend-development-agent.md
+  ├── azure-serverless-agent.md
+  ├── devops-azure-agent.md
+  ├── devops-railway-agent.md
+  ├── forms-workflow-agent.md
+  ├── content-seo-agent.md
+  ├── authentication-agent.md
+  ├── monitoring-observability-agent.md
+  ├── testing-quality-agent.md
+  ├── security-production-agent.md
+  ├── accessibility-compliance-agent.md
+  └── code-review-agent.md
+
+commands/                - 81 slash commands organized by function (at root level)
+  ├── scaffold-*.md
+  ├── add-*.md
+  ├── deploy-*.md
+  ├── review-*.md
+  └── [other commands]
+
+docs/                    - Plugin documentation
+examples/                - Example projects and templates
 ```
 
 ## Agent Architecture

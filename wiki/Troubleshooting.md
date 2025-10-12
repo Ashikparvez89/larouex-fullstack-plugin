@@ -50,7 +50,7 @@ claude --version
 
 2. **Check command files exist:**
 ```bash
-ls ~/.claude/plugins/larouex-fullstack-plugin/.claude/commands/
+ls ~/.claude/plugins/larouex-fullstack-plugin/commands/
 ```
 
 3. **Verify Node.js version:**

@@ -209,7 +209,7 @@ Create new projects with platform-specific configurations:
 - `/scaffold-railway-full` - Full-stack Railway project with PostgreSQL
 - `/scaffold-nextjs` - Standalone Next.js 15 project (platform-agnostic)
 
-### Azure Commands (8 commands)
+### Azure Commands (10 commands)
 
 Azure-specific cloud operations:
 
@@ -224,7 +224,7 @@ Azure-specific cloud operations:
 - `/add-websockets-azure` - Setup Azure Web PubSub for real-time features
 - `/add-cron-azure` - Create Azure Function with timer trigger
 
-### Railway Commands (7 commands)
+### Railway Commands (9 commands)
 
 Railway-specific deployment operations:
 
@@ -751,7 +751,7 @@ Adding complete authentication flow:
 **Solution**:
 1. Verify the `.claude` folder is in your project root
 2. Restart Claude Code: `exit` then `claude`
-3. Check file permissions: `ls -la .claude/commands/`
+3. Check file permissions: `ls -la commands/`
 4. Ensure command files end with `.md` extension
 
 #### Azure deployment fails
@@ -795,7 +795,7 @@ Adding complete authentication flow:
 
 ### Getting Help
 
-- **Documentation**: Check command-specific README files in `.claude/commands/`
+- **Documentation**: Check command-specific README files in `commands/`
 - **Agent Help**: Invoke the relevant agent for context-specific assistance
 - **GitHub Issues**: [Report bugs or request features](https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin/issues)
 - **Community**: Join discussions in GitHub Discussions
@@ -821,9 +821,9 @@ Contributions are welcome! Here's how you can help:
 
 To add a new command to the plugin:
 
-1. Create a new file in `.claude/commands/` with a descriptive name:
+1. Create a new file in `commands/` with a descriptive name:
    ```bash
-   touch .claude/commands/your-command-name.md
+   touch commands/your-command-name.md
    ```
 
 2. Add the command prompt following this template:
@@ -847,7 +847,7 @@ To add a new command to the plugin:
 
 To enhance an existing agent:
 
-1. Locate the agent file in `.claude/agents/`
+1. Locate the agent file in `agents/`
 2. Add new capabilities or improve existing ones
 3. Update examples and best practices
 4. Test with real-world scenarios

@@ -19,8 +19,8 @@ All commands follow this pattern:
 | Category | Commands | Description |
 |----------|----------|-------------|
 | [Scaffolding](Scaffolding-Commands) | 6 | Create new projects |
-| [Azure](Azure-Commands) | 8 | Azure cloud operations |
-| [Railway](Railway-Commands) | 7 | Railway platform operations |
+| [Azure](Azure-Commands) | 10 | Azure cloud operations |
+| [Railway](Railway-Commands) | 9 | Railway platform operations |
 | [Development](Development-Commands) | 20+ | Pages, components, forms |
 | [Testing](Testing-Commands) | 8 | Testing and quality |
 | [Review](Review-Commands) | 6 | Code review and gates |
@@ -41,7 +41,7 @@ All commands follow this pattern:
 
 [View detailed documentation](Scaffolding-Commands)
 
-### Azure Commands (8)
+### Azure Commands (10)
 - `/add-api-azure` - Create Azure Function endpoint
 - `/add-database-azure` - Configure Azure Table Storage
 - `/deploy-azure-staging` - Deploy to Azure staging
@@ -49,17 +49,21 @@ All commands follow this pattern:
 - `/setup-monitoring-azure` - Configure Application Insights
 - `/add-email-azure` - Setup Azure Communication Services
 - `/add-upload-azure` - Configure Azure Blob Storage
+- `/add-search-azure` - Integrate Azure Cognitive Search
+- `/add-websockets-azure` - Setup Azure Web PubSub
 - `/add-cron-azure` - Create Azure Function timer trigger
 
 [View detailed documentation](Azure-Commands)
 
-### Railway Commands (7)
+### Railway Commands (9)
 - `/add-api-railway` - Create Express.js endpoint
 - `/add-database-railway` - Configure Railway PostgreSQL
 - `/deploy-railway-staging` - Deploy to Railway staging
 - `/deploy-railway-production` - Deploy to Railway production
 - `/setup-monitoring-railway` - Setup Railway observability
 - `/add-email-railway` - Configure email service
+- `/add-upload-railway` - Setup file uploads
+- `/add-websockets-railway` - Add WebSocket support
 - `/add-cron-railway` - Create scheduled jobs
 
 [View detailed documentation](Railway-Commands)

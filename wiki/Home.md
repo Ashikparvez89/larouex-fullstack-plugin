@@ -21,8 +21,8 @@
 
 ### Features & Commands
 - [Scaffolding Commands](Scaffolding-Commands) - Project initialization (6 commands)
-- [Azure Commands](Azure-Commands) - Azure cloud operations (8 commands)
-- [Railway Commands](Railway-Commands) - Railway deployment (7 commands)
+- [Azure Commands](Azure-Commands) - Azure cloud operations (10 commands)
+- [Railway Commands](Railway-Commands) - Railway deployment (9 commands)
 - [Development Commands](Development-Commands) - Pages, components, forms
 - [Testing Commands](Testing-Commands) - Testing and quality assurance
 - [Review Commands](Review-Commands) - Code review and quality gates

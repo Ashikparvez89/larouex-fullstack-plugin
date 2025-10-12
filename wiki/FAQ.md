@@ -351,7 +351,7 @@ In Claude Code, type `/` to see available commands. Or browse:
 
 ### Can I create my own commands?
 
-Yes! Add new command files to `.claude/commands/` in the plugin directory. Follow the existing command format.
+Yes! Add new command files to `commands/` in the plugin directory. Follow the existing command format.
 
 See [Contributing](Contributing) for guidelines.
 
@@ -529,8 +529,8 @@ Restart Claude Code after updating.
 See [Architecture](Architecture) for technical details.
 
 Key components:
-- **Agents**: Specialized AI assistants in `.claude/agents/`
-- **Commands**: Slash commands in `.claude/commands/`
+- **Agents**: Specialized AI assistants in `agents/` at root level
+- **Commands**: Slash commands in `commands/` at root level
 - **Metadata**: Plugin configuration in `.claude-plugin/`
 
 ### Can I use this plugin commercially?

@@ -364,14 +364,14 @@ claude --version
 **2. Check command files**
 ```bash
 # Verify .md files exist in commands directory
-ls ~/.claude/plugins/larouex-fullstack-plugin/.claude/commands/
+ls ~/.claude/plugins/larouex-fullstack-plugin/commands/
 ```
 
 **3. Check for syntax errors**
 
 Open a command file and verify it's properly formatted:
 ```bash
-cat ~/.claude/plugins/larouex-fullstack-plugin/.claude/commands/add-page.md
+cat ~/.claude/plugins/larouex-fullstack-plugin/commands/add-page.md
 ```
 
 ---
