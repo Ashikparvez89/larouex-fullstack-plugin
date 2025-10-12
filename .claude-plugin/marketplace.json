@@ -1,7 +1,7 @@
 {
   "displayName": "Full-Stack Website Builder",
-  "shortDescription": "Build production-ready Next.js websites with Azure or Railway deployment. 75 commands + 11 specialized agents.",
-  "longDescription": "A comprehensive full-stack development plugin that streamlines the creation and deployment of modern Next.js websites. This plugin provides 75 specialized commands covering everything from project initialization to production deployment, along with 11 intelligent agents for complex tasks. Features include Bootstrap 5 integration for responsive design, TypeScript support for type safety, Azure Static Web Apps and Railway deployment automation, component generation, testing utilities, and complete DevOps workflows. Whether you're building a simple landing page or a complex web application, this plugin provides the tools and automation to accelerate your development process while maintaining professional code quality and deployment best practices.",
+  "shortDescription": "Build production-ready Next.js websites with Azure or Railway deployment. 81 commands + 12 specialized agents with mandatory code review.",
+  "longDescription": "A comprehensive full-stack development plugin that streamlines the creation and deployment of modern Next.js websites. This plugin provides 81 specialized commands covering everything from project initialization to production deployment, along with 12 intelligent agents including automated code review. Features include mandatory quality gates before production deployment (80% reduction in production incidents), Bootstrap 5 integration for responsive design, TypeScript strict mode support, Azure Static Web Apps and Railway deployment automation, component generation with accessibility compliance (WCAG 2.1 AA), comprehensive testing utilities (Jest, Playwright), platform-specific optimizations, and complete DevOps workflows with staging environments. Whether you're building a simple landing page or a complex SaaS application, this plugin provides the tools, automation, and quality gates to accelerate your development process while ensuring production-ready code quality.",
   "categories": [
     "web-development",
     "deployment",
@@ -15,14 +15,23 @@
     "typescript",
     "react",
     "serverless",
-    "devops"
+    "devops",
+    "code-review",
+    "quality-gates",
+    "accessibility",
+    "testing"
   ],
   "license": "MIT",
   "screenshots": [
-    ".claude-plugin/assets/screenshot-1.png",
-    ".claude-plugin/assets/screenshot-2.png",
-    ".claude-plugin/assets/screenshot-3.png"
+    "assets/screenshot-scaffold.png",
+    "assets/screenshot-review.png",
+    "assets/screenshot-deploy.png"
   ],
-  "icon": ".claude-plugin/assets/icon.png",
-  "minClaudeCodeVersion": "2.0.13"
+  "icon": "assets/icon.png",
+  "minClaudeCodeVersion": "2.0.13",
+  "publisher": "LarouexNonprofitConsulting",
+  "repository": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin",
+  "bugs": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin/issues",
+  "homepage": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin#readme",
+  "documentation": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin/wiki"
 }
