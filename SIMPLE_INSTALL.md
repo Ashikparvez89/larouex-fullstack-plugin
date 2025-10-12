@@ -39,22 +39,37 @@ git clone https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin
 
 ### Step 2: Create Local Marketplace
 
+Create the marketplace directory:
+```bash
+mkdir -p ~/.claude/marketplaces/local/.claude-plugin
+```
+
+Create a symlink to your plugin:
+```bash
+cd ~/.claude/marketplaces/local
+ln -s /Users/YOU/Projects/larouex-fullstack-plugin larouex-website
+```
+**Important:** Replace `/Users/YOU/Projects/` with your actual path!
+
 Create file: `~/.claude/marketplaces/local/.claude-plugin/marketplace.json`
 
 ```json
 {
   "name": "local-dev",
+  "owner": "your-username",
   "description": "Local development marketplace",
   "plugins": [
     {
       "name": "larouex-fullstack-builder",
-      "source": "/full/path/to/your/larouex-fullstack-plugin"
+      "source": "./larouex-website"
     }
   ]
 }
 ```
 
-**Important:** Replace `/full/path/to/your/larouex-fullstack-plugin` with the actual path!
+**Important:**
+- `owner` is required (use your GitHub username or any identifier)
+- `source` must be a relative path starting with `./`
 
 ### Step 3: Add Local Marketplace
 In Claude Code:
