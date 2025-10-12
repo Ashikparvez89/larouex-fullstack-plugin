@@ -97,21 +97,44 @@ When you make changes to the plugin:
 
 ## Verification
 
-After installation, check:
+After installation, verify the plugin is working:
 
-1. **List installed plugins:**
-   ```
-   /plugin
-   ```
-   You should see "larouex-fullstack-builder" in the list
+### Method 1: Test Commands Directly (Most Reliable)
 
-2. **Test a command:**
-   ```
-   /scaffold-nextjs
-   ```
+Type these commands in Claude Code:
+```
+/scaffold-nextjs
+/add-component
+/review-code
+```
 
-3. **See all commands:**
-   Type `/` and browse - you'll see 81 new commands!
+If you see the command execute (even if it says "not in a Next.js project"), **the plugin is working!** ✅
+
+### Method 2: Check Autocomplete
+
+Type `/scaffold` and wait for autocomplete. You should see:
+- `/scaffold-nextjs`
+- `/scaffold-azure-full`
+- `/scaffold-railway-full`
+
+If you see these, **the plugin is installed!** ✅
+
+### Method 3: Check Settings File
+
+```bash
+cat ~/.claude/settings.json | grep "enabledPlugins"
+```
+
+You should see:
+```json
+"enabledPlugins": {
+  "larouex-fullstack-builder@local-dev": true
+}
+```
+
+### Note About Plugin UI
+
+**Important:** The plugin might not show in the `/plugin` list UI even though it's installed and working. This appears to be a display issue with local marketplace plugins. **If your commands work, the plugin is installed correctly.**
 
 ---
 
