@@ -1,0 +1,14 @@
+# GitHub Sponsorship Configuration
+# These are supported funding model platforms
+
+github: [larouex] # GitHub username for sponsorship
+# patreon: # Patreon username
+# open_collective: # Open Collective username
+# ko_fi: # Ko-fi username
+# tidelift: # Tidelift platform-name/package-name
+# community_bridge: # Community Bridge project name
+# liberapay: # Liberapay username
+# issuehunt: # IssueHunt username
+# otechie: # Otechie username
+# lfx_crowdfunding: # LFX Crowdfunding project name
+# custom: ["https://www.paypal.me/example"] # Custom donation URLs

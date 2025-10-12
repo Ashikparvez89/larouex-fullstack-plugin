@@ -1,0 +1,79 @@
+{
+  "name": "@larouex/claude-fullstack-builder",
+  "version": "1.0.0",
+  "description": "Complete Next.js + Azure/Railway full-stack website builder with 81 commands and 12 specialized agents for Claude Code",
+  "author": {
+    "name": "Larry W Jordan Jr",
+    "url": "https://github.com/larouex"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-code-plugin",
+    "nextjs",
+    "azure",
+    "railway",
+    "bootstrap",
+    "typescript",
+    "fullstack",
+    "web-development",
+    "react",
+    "serverless",
+    "devops",
+    "deployment",
+    "scaffolding",
+    "code-review"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin/issues"
+  },
+  "homepage": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin#readme",
+  "engines": {
+    "claude-code": ">=2.0.13",
+    "node": ">=20.0.0"
+  },
+  "claudeCodePlugin": {
+    "name": "larouex-fullstack-builder",
+    "version": "1.0.0",
+    "agents": 12,
+    "commands": 81,
+    "platforms": [
+      "azure",
+      "railway"
+    ],
+    "technologies": [
+      "nextjs",
+      "react",
+      "typescript",
+      "bootstrap",
+      "azure-functions",
+      "azure-static-web-apps",
+      "postgresql",
+      "prisma",
+      "express"
+    ]
+  },
+  "files": [
+    ".claude-plugin/",
+    ".claude/",
+    "docs/",
+    "examples/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "validate": "echo 'Validating plugin structure...' && node scripts/validate.js",
+    "test": "echo 'Testing commands...' && node scripts/test-commands.js",
+    "docs": "echo 'Generating documentation...' && node scripts/generate-docs.js"
+  },
+  "devDependencies": {},
+  "peerDependencies": {},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

@@ -1,0 +1,251 @@
+name: Validate Plugin Structure
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+    paths:
+      - '.claude/**'
+      - '.claude-plugin/**'
+      - 'package.json'
+  push:
+    branches: [ main ]
+    paths:
+      - '.claude/**'
+      - '.claude-plugin/**'
+      - 'package.json'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Plugin
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Validate plugin.json structure
+        run: |
+          echo "Validating .claude-plugin/plugin.json..."
+          if [ ! -f ".claude-plugin/plugin.json" ]; then
+            echo "Error: .claude-plugin/plugin.json not found"
+            exit 1
+          fi
+
+          # Validate JSON syntax
+          if ! cat .claude-plugin/plugin.json | jq empty; then
+            echo "Error: Invalid JSON in plugin.json"
+            exit 1
+          fi
+
+          # Check required fields
+          REQUIRED_FIELDS=("name" "version" "description" "author")
+          for field in "${REQUIRED_FIELDS[@]}"; do
+            if ! cat .claude-plugin/plugin.json | jq -e ".$field" > /dev/null; then
+              echo "Error: Missing required field: $field"
+              exit 1
+            fi
+          done
+
+          echo "✓ plugin.json is valid"
+
+      - name: Validate marketplace.json structure
+        run: |
+          echo "Validating .claude-plugin/marketplace.json..."
+          if [ ! -f ".claude-plugin/marketplace.json" ]; then
+            echo "Error: .claude-plugin/marketplace.json not found"
+            exit 1
+          fi
+
+          # Validate JSON syntax
+          if ! cat .claude-plugin/marketplace.json | jq empty; then
+            echo "Error: Invalid JSON in marketplace.json"
+            exit 1
+          fi
+
+          echo "✓ marketplace.json is valid"
+
+      - name: Validate package.json
+        run: |
+          echo "Validating package.json..."
+          if [ ! -f "package.json" ]; then
+            echo "Error: package.json not found"
+            exit 1
+          fi
+
+          # Validate JSON syntax
+          if ! cat package.json | jq empty; then
+            echo "Error: Invalid JSON in package.json"
+            exit 1
+          fi
+
+          # Check repository URL
+          REPO_URL=$(cat package.json | jq -r '.repository.url')
+          if [[ ! "$REPO_URL" =~ "LarouexNonprofitConsulting/larouex-fullstack-plugin" ]]; then
+            echo "Warning: Repository URL may be incorrect: $REPO_URL"
+          fi
+
+          echo "✓ package.json is valid"
+
+      - name: Check agents directory
+        run: |
+          echo "Checking .claude/agents/ directory..."
+          if [ ! -d ".claude/agents" ]; then
+            echo "Error: .claude/agents directory not found"
+            exit 1
+          fi
+
+          AGENT_COUNT=$(find .claude/agents -name "*.md" | wc -l)
+          echo "Found $AGENT_COUNT agent files"
+
+          if [ "$AGENT_COUNT" -lt 1 ]; then
+            echo "Warning: No agent files found"
+          fi
+
+          # Check for markdown syntax errors in agents
+          for file in .claude/agents/*.md; do
+            if [ -f "$file" ]; then
+              echo "Checking $file..."
+              # Basic check: file should not be empty
+              if [ ! -s "$file" ]; then
+                echo "Error: $file is empty"
+                exit 1
+              fi
+            fi
+          done
+
+          echo "✓ Agents directory is valid"
+
+      - name: Check commands directory
+        run: |
+          echo "Checking .claude/commands/ directory..."
+          if [ ! -d ".claude/commands" ]; then
+            echo "Error: .claude/commands directory not found"
+            exit 1
+          fi
+
+          COMMAND_COUNT=$(find .claude/commands -name "*.md" | wc -l)
+          echo "Found $COMMAND_COUNT command files"
+
+          if [ "$COMMAND_COUNT" -lt 1 ]; then
+            echo "Warning: No command files found"
+          fi
+
+          # Check for markdown syntax errors in commands
+          for file in .claude/commands/*.md; do
+            if [ -f "$file" ]; then
+              echo "Checking $file..."
+              # Basic check: file should not be empty
+              if [ ! -s "$file" ]; then
+                echo "Error: $file is empty"
+                exit 1
+              fi
+            fi
+          done
+
+          echo "✓ Commands directory is valid"
+
+      - name: Verify documentation
+        run: |
+          echo "Checking documentation files..."
+
+          # Check README.md exists and is not empty
+          if [ ! -f "README.md" ] || [ ! -s "README.md" ]; then
+            echo "Error: README.md is missing or empty"
+            exit 1
+          fi
+
+          # Check LICENSE exists
+          if [ ! -f "LICENSE" ]; then
+            echo "Warning: LICENSE file not found"
+          fi
+
+          # Check CHANGELOG.md exists
+          if [ ! -f "CHANGELOG.md" ]; then
+            echo "Warning: CHANGELOG.md not found"
+          fi
+
+          echo "✓ Documentation files verified"
+
+      - name: Check for broken markdown links in README
+        run: |
+          echo "Checking for broken internal links in README.md..."
+
+          # Extract markdown links
+          grep -o '\[.*\](.*\.md)' README.md | sed 's/.*(\(.*\))/\1/' | while read link; do
+            # Skip external links
+            if [[ "$link" =~ ^http ]]; then
+              continue
+            fi
+
+            # Check if file exists
+            if [ ! -f "$link" ]; then
+              echo "Warning: Broken link found: $link"
+            fi
+          done
+
+          echo "✓ Markdown link check complete"
+
+      - name: Validate GitHub repository URLs
+        run: |
+          echo "Validating repository URLs..."
+
+          EXPECTED_REPO="LarouexNonprofitConsulting/larouex-fullstack-plugin"
+
+          # Check plugin.json
+          PLUGIN_REPO=$(cat .claude-plugin/plugin.json | jq -r '.repository.url' | sed 's/.*github\.com[:/]\(.*\)\.git/\1/')
+          if [ "$PLUGIN_REPO" != "$EXPECTED_REPO" ]; then
+            echo "Error: Incorrect repository in plugin.json: $PLUGIN_REPO"
+            exit 1
+          fi
+
+          # Check package.json
+          PACKAGE_REPO=$(cat package.json | jq -r '.repository.url' | sed 's/.*github\.com[:/]\(.*\)\.git/\1/')
+          if [ "$PACKAGE_REPO" != "$EXPECTED_REPO" ]; then
+            echo "Error: Incorrect repository in package.json: $PACKAGE_REPO"
+            exit 1
+          fi
+
+          echo "✓ Repository URLs are correct"
+
+      - name: Check for required directories
+        run: |
+          echo "Checking required directory structure..."
+
+          REQUIRED_DIRS=(
+            ".claude"
+            ".claude/agents"
+            ".claude/commands"
+            ".claude-plugin"
+          )
+
+          for dir in "${REQUIRED_DIRS[@]}"; do
+            if [ ! -d "$dir" ]; then
+              echo "Error: Required directory not found: $dir"
+              exit 1
+            fi
+          done
+
+          echo "✓ All required directories exist"
+
+      - name: Summary
+        run: |
+          echo ""
+          echo "=========================================="
+          echo "Plugin Validation Summary"
+          echo "=========================================="
+          echo ""
+          echo "✓ Plugin structure is valid"
+          echo "✓ JSON files are properly formatted"
+          echo "✓ All required directories exist"
+          echo "✓ Agents and commands are present"
+          echo "✓ Documentation is available"
+          echo "✓ Repository URLs are correct"
+          echo ""
+          echo "Plugin is ready for release!"
+          echo "=========================================="

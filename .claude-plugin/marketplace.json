@@ -1,0 +1,28 @@
+{
+  "displayName": "Full-Stack Website Builder",
+  "shortDescription": "Build production-ready Next.js websites with Azure or Railway deployment. 75 commands + 11 specialized agents.",
+  "longDescription": "A comprehensive full-stack development plugin that streamlines the creation and deployment of modern Next.js websites. This plugin provides 75 specialized commands covering everything from project initialization to production deployment, along with 11 intelligent agents for complex tasks. Features include Bootstrap 5 integration for responsive design, TypeScript support for type safety, Azure Static Web Apps and Railway deployment automation, component generation, testing utilities, and complete DevOps workflows. Whether you're building a simple landing page or a complex web application, this plugin provides the tools and automation to accelerate your development process while maintaining professional code quality and deployment best practices.",
+  "categories": [
+    "web-development",
+    "deployment",
+    "fullstack"
+  ],
+  "keywords": [
+    "nextjs",
+    "azure",
+    "railway",
+    "bootstrap",
+    "typescript",
+    "react",
+    "serverless",
+    "devops"
+  ],
+  "license": "MIT",
+  "screenshots": [
+    ".claude-plugin/assets/screenshot-1.png",
+    ".claude-plugin/assets/screenshot-2.png",
+    ".claude-plugin/assets/screenshot-3.png"
+  ],
+  "icon": ".claude-plugin/assets/icon.png",
+  "minClaudeCodeVersion": "2.0.13"
+}

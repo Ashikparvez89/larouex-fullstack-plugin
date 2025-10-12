@@ -1,0 +1,28 @@
+{
+  "name": "larouex-fullstack-builder",
+  "version": "1.0.0",
+  "description": "Complete Next.js + Azure/Railway full-stack website builder with 81 commands and 12 specialized agents including automated code review",
+  "author": "Larry W Jordan Jr",
+  "homepage": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin.git"
+  },
+  "agents": [],
+  "commands": [],
+  "keywords": [
+    "nextjs",
+    "azure",
+    "railway",
+    "bootstrap",
+    "typescript",
+    "fullstack",
+    "web-development",
+    "code-review",
+    "quality-gates"
+  ],
+  "license": "MIT",
+  "engines": {
+    "claude-code": ">=2.0.13"
+  }
+}
