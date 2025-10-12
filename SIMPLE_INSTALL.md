@@ -1,38 +1,55 @@
 # Simple Installation - 3 Steps
 
 ## What You Need
-- VSCode with Claude Code extension installed
+- VSCode with Claude Code extension (v2.0.13 or higher)
 - Terminal/Command Prompt
+- Git
 
 ## Installation (Takes 2 minutes)
 
 ### Step 1: Copy Plugin to Claude
 Open terminal and run these **exact commands**:
 
+**Mac/Linux:**
 ```bash
-# Mac/Linux
 mkdir -p ~/.claude/plugins
 cd ~/.claude/plugins
 git clone https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin.git
+```
 
-# Windows (PowerShell)
+**Windows (PowerShell):**
+```powershell
 mkdir -Force $env:USERPROFILE\.claude\plugins
 cd $env:USERPROFILE\.claude\plugins
 git clone https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin.git
 ```
 
+**Verify the structure looks correct:**
+```bash
+# You should see commands/ and agents/ at the root level:
+~/.claude/plugins/larouex-fullstack-plugin/
+├── .claude-plugin/plugin.json
+├── commands/          ✅ 81 command files
+└── agents/            ✅ 12 agent files
+```
+
 ### Step 2: Restart VSCode
-- Close VSCode completely
+- **Close VSCode completely** (don't just "Reload Window")
 - Open VSCode again
 - Open Claude Code
 
 ### Step 3: Test It
 In Claude Code, type:
 ```
-/
+/scaffold
 ```
 
-You should see commands like `/scaffold-nextjs`, `/add-component`, etc.
+You should see autocomplete with:
+- `/scaffold-nextjs`
+- `/scaffold-azure-full`
+- `/scaffold-railway-full`
+
+**If you see these commands, installation successful!** ✅
 
 ## That's It!
 
