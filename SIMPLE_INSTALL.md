@@ -1,111 +1,173 @@
-# Simple Installation - 3 Steps
+# Plugin Installation - THE CORRECT WAY
 
 ## What You Need
 - VSCode with Claude Code extension (v2.0.13 or higher)
-- Terminal/Command Prompt
-- Git
+- Claude Code running
 
-## Installation (Takes 2 minutes)
+## Installation Method 1: From GitHub (Recommended for Users)
 
-### Step 1: Copy Plugin to Claude
-Open terminal and run these **exact commands**:
-
-**Mac/Linux:**
-```bash
-mkdir -p ~/.claude/plugins
-cd ~/.claude/plugins
-git clone https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin.git
+### Step 1: Add Marketplace
+In Claude Code, run:
+```
+/plugin marketplace add LarouexNonprofitConsulting/larouex-fullstack-plugin
 ```
 
-**Windows (PowerShell):**
-```powershell
-mkdir -Force $env:USERPROFILE\.claude\plugins
-cd $env:USERPROFILE\.claude\plugins
-git clone https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin.git
+### Step 2: Install Plugin
+```
+/plugin install larouex-fullstack-builder
 ```
 
-**Verify the structure looks correct:**
-```bash
-# You should see commands/ and agents/ at the root level:
-~/.claude/plugins/larouex-fullstack-plugin/
-├── .claude-plugin/plugin.json
-├── commands/          ✅ 81 command files
-└── agents/            ✅ 12 agent files
-```
-
-### Step 2: Restart VSCode
-- **Close VSCode completely** (don't just "Reload Window")
-- Open VSCode again
-- Open Claude Code
-
-### Step 3: Test It
-In Claude Code, type:
-```
-/scaffold
-```
-
-You should see autocomplete with:
+### Step 3: Verify
+Type `/scaffold` and you should see:
 - `/scaffold-nextjs`
 - `/scaffold-azure-full`
 - `/scaffold-railway-full`
 
-**If you see these commands, installation successful!** ✅
+**That's it!** ✅
 
-## That's It!
+---
 
-If you see the commands, you're done. If not, try these:
+## Installation Method 2: Local Development (For Plugin Developers)
 
-### Quick Fix 1: Check the folder exists
+If you're developing the plugin locally, use this method:
+
+### Step 1: Clone the Repository
 ```bash
-# Mac/Linux
-ls ~/.claude/plugins/larouex-fullstack-plugin/.claude-plugin/
-
-# Windows
-dir %USERPROFILE%\.claude\plugins\larouex-fullstack-plugin\.claude-plugin\
+cd ~/Projects  # or wherever you want
+git clone https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin.git
 ```
 
-You should see `plugin.json`.
+### Step 2: Create Local Marketplace
 
-### Quick Fix 2: Use a symlink instead (for development)
-```bash
-# Mac/Linux
-cd ~/.claude/plugins
-ln -s /Users/larrywjordanjr/Projects/larouex-website larouex-fullstack-plugin
+Create file: `~/.claude/marketplaces/local/.claude-plugin/marketplace.json`
 
-# Windows (as Administrator)
-cd %USERPROFILE%\.claude\plugins
-mklink /D larouex-fullstack-plugin C:\path\to\your\larouex-website
+```json
+{
+  "name": "local-dev",
+  "description": "Local development marketplace",
+  "plugins": [
+    {
+      "name": "larouex-fullstack-builder",
+      "source": "/full/path/to/your/larouex-fullstack-plugin"
+    }
+  ]
+}
 ```
 
-Then restart VSCode.
+**Important:** Replace `/full/path/to/your/larouex-fullstack-plugin` with the actual path!
 
-## Still Not Working?
+### Step 3: Add Local Marketplace
+In Claude Code:
+```
+/plugin marketplace add ~/.claude/marketplaces/local
+```
 
-1. Check Claude Code version: Go to Extensions → Claude Code → Should be 2.0.13 or higher
-2. Check if `.claude-plugin/plugin.json` exists in the plugin folder
-3. Try deleting and re-cloning:
-   ```bash
-   rm -rf ~/.claude/plugins/larouex-fullstack-plugin
-   # Then repeat Step 1
+### Step 4: Install Plugin
+```
+/plugin install larouex-fullstack-builder@local-dev
+```
+
+### Step 5: Test Changes
+When you make changes to the plugin:
+```
+/plugin uninstall larouex-fullstack-builder
+/plugin install larouex-fullstack-builder@local-dev
+```
+
+---
+
+## Verification
+
+After installation, check:
+
+1. **List installed plugins:**
    ```
+   /plugin
+   ```
+   You should see "larouex-fullstack-builder" in the list
+
+2. **Test a command:**
+   ```
+   /scaffold-nextjs
+   ```
+
+3. **See all commands:**
+   Type `/` and browse - you'll see 81 new commands!
+
+---
+
+## Troubleshooting
+
+### Plugin not showing up?
+
+1. **Check Claude Code version:**
+   - Go to Extensions → Claude Code
+   - Must be v2.0.13 or higher
+
+2. **Reinstall the plugin:**
+   ```
+   /plugin uninstall larouex-fullstack-builder
+   /plugin install larouex-fullstack-builder
+   ```
+
+3. **Check the plugin directory structure:**
+   ```bash
+   ls ~/.claude/plugins/larouex-fullstack-builder/
+   ```
+   Should show:
+   - `.claude-plugin/plugin.json`
+   - `commands/` (81 files)
+   - `agents/` (12 files)
+
+4. **Restart VSCode:**
+   - Close VSCode completely
+   - Open again
+
+### Commands not appearing?
+
+The plugin uses the `/plugin` installation system. You **cannot** just copy files to `~/.claude/plugins/` - you MUST use `/plugin marketplace add` and `/plugin install`.
+
+---
 
 ## What You Get
 
-After installation you'll have access to:
-- **81 commands** (type `/` to see them all)
-- **12 AI agents** (automatically used by commands)
+**81 Commands:**
+- Scaffolding: `/scaffold-nextjs`, `/scaffold-azure-full`, `/scaffold-railway-full`
+- Components: `/add-component`, `/add-page`, `/add-form`
+- APIs: `/add-api-azure`, `/add-api-railway`
+- Deploy: `/deploy-azure-production`, `/deploy-railway-production`
+- Review: `/review-code`, `/review-security`, `/review-before-deploy`
+- And 70+ more!
 
-Try:
-- `/scaffold-nextjs` - Create new Next.js project
-- `/add-component` - Add React component
-- `/add-page` - Add new page
-- `/review-code` - Review your code
+**12 AI Agents:**
+Automatically invoked by commands for specialized tasks.
+
+---
+
+## The Problem with Old Installation Instructions
+
+**❌ WRONG (doesn't work):**
+```bash
+# This doesn't actually install the plugin!
+git clone https://github.com/.../plugin.git ~/.claude/plugins/plugin
+```
+
+**✅ CORRECT:**
+```
+/plugin marketplace add user/repo
+/plugin install plugin-name
+```
+
+Claude Code's plugin system requires registration through the `/plugin` command. Simply copying files doesn't work.
+
+---
 
 ## Need Help?
 
-Create an issue: https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin/issues
+**GitHub Issues:** https://github.com/LarouexNonprofitConsulting/larouex-fullstack-plugin/issues
 
-Tell me:
+Include:
 1. Your OS (Mac/Windows/Linux)
 2. Claude Code version
-3. What error you see
+3. Output of `/plugin` command
+4. Error messages
