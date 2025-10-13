@@ -197,7 +197,7 @@ This sets up:
 - Protected routes
 - Session management
 
-See [Authentication Agent](Authentication-Agent) for details.
+See Authentication Agent for details.
 
 ### What if a command fails?
 

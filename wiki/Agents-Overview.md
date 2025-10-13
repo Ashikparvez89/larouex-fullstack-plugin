@@ -20,68 +20,68 @@ Agents are specialized AI assistants with deep knowledge in specific areas of we
 
 ### Frontend & UI
 
-1. **[Frontend Development Agent](Frontend-Development-Agent)**
+1. **Frontend Development Agent**
    - React, TypeScript, Bootstrap
    - Responsive design and accessibility
    - Component architecture
 
-2. **[Forms Workflow Agent](Forms-Workflow-Agent)**
+2. **Forms Workflow Agent**
    - Form creation and validation
    - Multi-step workflows
    - File upload handling
 
-3. **[Content & SEO Agent](Content-SEO-Agent)**
+3. **Content & SEO Agent**
    - SEO optimization
    - Content management
    - Structured data and metadata
 
 ### Backend & Cloud
 
-4. **[Azure Serverless Agent](Azure-Serverless-Agent)**
+4. **Azure Serverless Agent**
    - Azure Functions development
    - Azure Table Storage
    - Azure services integration
 
-5. **[DevOps Azure Agent](DevOps-Azure-Agent)**
+5. **DevOps Azure Agent**
    - Azure deployment
    - GitHub Actions CI/CD
    - Azure infrastructure
 
-6. **[DevOps Railway Agent](DevOps-Railway-Agent)**
+6. **DevOps Railway Agent**
    - Railway deployment
    - PostgreSQL and Prisma
    - Railway platform optimization
 
 ### Quality & Operations
 
-7. **[Monitoring & Observability Agent](Monitoring-Observability-Agent)**
+7. **Monitoring & Observability Agent**
    - Application monitoring
    - Performance tracking
    - Error logging and alerting
 
-8. **[Testing & Quality Agent](Testing-Quality-Agent)**
+8. **Testing & Quality Agent**
    - Unit and integration testing
    - E2E testing with Playwright
    - Test coverage and quality assurance
 
-9. **[Security & Production Agent](Security-Production-Agent)**
+9. **Security & Production Agent**
    - Security audits and best practices
    - Production readiness
    - Vulnerability scanning
 
-10. **[Accessibility & Compliance Agent](Accessibility-Compliance-Agent)**
+10. **Accessibility & Compliance Agent**
     - WCAG 2.1 AA compliance
     - Accessibility testing
     - ARIA and semantic HTML
 
 ### Features & Authentication
 
-11. **[Authentication Agent](Authentication-Agent)**
+11. **Authentication Agent**
     - User authentication flows
     - OAuth and social login
     - Session management and RBAC
 
-12. **[Code Review Agent](Code-Review-Agent)**
+12. **Code Review Agent**
     - Automated code review
     - 10 review categories
     - Pre-deployment quality gates
@@ -96,9 +96,9 @@ These agents handle everything related to the user interface:
 
 | Agent | Primary Focus | Common Commands |
 |-------|--------------|-----------------|
-| [Frontend Development Agent](Frontend-Development-Agent) | UI components, layouts, responsive design | `/add-page`, `/add-component`, `/add-section` |
-| [Forms Workflow Agent](Forms-Workflow-Agent) | Forms, validation, data entry | `/add-form`, `/add-multistep-form` |
-| [Content & SEO Agent](Content-SEO-Agent) | SEO, content structure, metadata | `/add-seo`, `/add-content-json` |
+| Frontend Development Agent | UI components, layouts, responsive design | `/add-page`, `/add-component`, `/add-section` |
+| Forms Workflow Agent | Forms, validation, data entry | `/add-form`, `/add-multistep-form` |
+| Content & SEO Agent | SEO, content structure, metadata | `/add-seo`, `/add-content-json` |
 
 **When to use:**
 - Building pages and components
@@ -114,9 +114,9 @@ These agents manage server-side logic and cloud infrastructure:
 
 | Agent | Primary Focus | Common Commands |
 |-------|--------------|-----------------|
-| [Azure Serverless Agent](Azure-Serverless-Agent) | Azure Functions, serverless architecture | `/add-api-azure`, `/add-database-azure`, `/scaffold-azure-full` |
-| [DevOps Azure Agent](DevOps-Azure-Agent) | Azure deployment and CI/CD | `/deploy-azure-staging`, `/deploy-azure-production` |
-| [DevOps Railway Agent](DevOps-Railway-Agent) | Railway deployment and full-stack | `/add-api-railway`, `/deploy-railway-staging`, `/scaffold-railway-full` |
+| Azure Serverless Agent | Azure Functions, serverless architecture | `/add-api-azure`, `/add-database-azure`, `/scaffold-azure-full` |
+| DevOps Azure Agent | Azure deployment and CI/CD | `/deploy-azure-staging`, `/deploy-azure-production` |
+| DevOps Railway Agent | Railway deployment and full-stack | `/add-api-railway`, `/deploy-railway-staging`, `/scaffold-railway-full` |
 
 **When to use:**
 - Creating API endpoints
@@ -132,10 +132,10 @@ These agents ensure your application is secure, performant, and maintainable:
 
 | Agent | Primary Focus | Common Commands |
 |-------|--------------|-----------------|
-| [Monitoring & Observability Agent](Monitoring-Observability-Agent) | Performance monitoring, logging | `/setup-monitoring-azure`, `/setup-monitoring-railway` |
-| [Testing & Quality Agent](Testing-Quality-Agent) | Testing strategies, quality assurance | `/add-tests`, `/add-e2e-test` |
-| [Security & Production Agent](Security-Production-Agent) | Security, production best practices | `/audit-security` |
-| [Accessibility & Compliance Agent](Accessibility-Compliance-Agent) | WCAG compliance, accessibility | `/audit-accessibility` |
+| Monitoring & Observability Agent | Performance monitoring, logging | `/setup-monitoring-azure`, `/setup-monitoring-railway` |
+| Testing & Quality Agent | Testing strategies, quality assurance | `/add-tests`, `/add-e2e-test` |
+| Security & Production Agent | Security, production best practices | `/audit-security` |
+| Accessibility & Compliance Agent | WCAG compliance, accessibility | `/audit-accessibility` |
 
 **When to use:**
 - Setting up monitoring
@@ -151,8 +151,8 @@ These agents handle user authentication and code quality:
 
 | Agent | Primary Focus | Common Commands |
 |-------|--------------|-----------------|
-| [Authentication Agent](Authentication-Agent) | Auth flows, OAuth, sessions | `/add-auth`, `/add-protected-route`, `/add-social-login` |
-| [Code Review Agent](Code-Review-Agent) | Code quality, best practices, pre-deployment gates | `/review-code`, `/review-before-deploy`, `/review-security` |
+| Authentication Agent | Auth flows, OAuth, sessions | `/add-auth`, `/add-protected-route`, `/add-social-login` |
+| Code Review Agent | Code quality, best practices, pre-deployment gates | `/review-code`, `/review-before-deploy`, `/review-security` |
 
 **When to use:**
 - Implementing authentication
@@ -290,24 +290,24 @@ What are you building?
 Click on any agent name to learn more about their capabilities, common patterns, and best practices:
 
 ### Frontend & UI
-- [Frontend Development Agent](Frontend-Development-Agent) - React components, responsive design
-- [Forms Workflow Agent](Forms-Workflow-Agent) - Forms, validation, multi-step workflows
-- [Content & SEO Agent](Content-SEO-Agent) - SEO, metadata, content management
+- Frontend Development Agent - React components, responsive design
+- Forms Workflow Agent - Forms, validation, multi-step workflows
+- Content & SEO Agent - SEO, metadata, content management
 
 ### Backend & Cloud
-- [Azure Serverless Agent](Azure-Serverless-Agent) - Azure Functions, Table Storage
-- [DevOps Azure Agent](DevOps-Azure-Agent) - Azure deployment, GitHub Actions
-- [DevOps Railway Agent](DevOps-Railway-Agent) - Railway deployment, PostgreSQL
+- Azure Serverless Agent - Azure Functions, Table Storage
+- DevOps Azure Agent - Azure deployment, GitHub Actions
+- DevOps Railway Agent - Railway deployment, PostgreSQL
 
 ### Quality & Operations
-- [Monitoring & Observability Agent](Monitoring-Observability-Agent) - Application monitoring
-- [Testing & Quality Agent](Testing-Quality-Agent) - Testing strategies
-- [Security & Production Agent](Security-Production-Agent) - Security audits
-- [Accessibility & Compliance Agent](Accessibility-Compliance-Agent) - WCAG compliance
+- Monitoring & Observability Agent - Application monitoring
+- Testing & Quality Agent - Testing strategies
+- Security & Production Agent - Security audits
+- Accessibility & Compliance Agent - WCAG compliance
 
 ### Features & Authentication
-- [Authentication Agent](Authentication-Agent) - Auth flows, OAuth
-- [Code Review Agent](Code-Review-Agent) - Code quality, pre-deployment gates
+- Authentication Agent - Auth flows, OAuth
+- Code Review Agent - Code quality, pre-deployment gates
 
 ---
 

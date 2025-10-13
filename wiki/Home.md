@@ -159,10 +159,10 @@ claude
 
 ### Building a SaaS Application
 1. [Scaffold Railway project](Scaffolding-Commands#scaffold-railway-full)
-2. [Add authentication](Authentication-Agent#add-auth)
+2. [Add authentication](Advanced-Commands#add-auth)
 3. [Create admin panel](Advanced-Commands#add-admin-panel)
 4. [Add payment processing](Advanced-Commands#add-stripe)
-5. [Setup monitoring](Monitoring-Observability-Agent#setup-monitoring)
+5. [Setup monitoring](Performance-Commands#setup-monitoring)
 
 ### Building an E-commerce Site
 1. [Scaffold project](Scaffolding-Commands)

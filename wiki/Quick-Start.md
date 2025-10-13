@@ -397,8 +397,8 @@ If all checks pass, deploy:
 
 Understand the 12 specialized agents:
 - [Agents Overview](Agents-Overview)
-- [Frontend Development Agent](Frontend-Development-Agent)
-- [Code Review Agent](Code-Review-Agent)
+- Frontend Development Agent
+- Code Review Agent
 
 ### Explore All Commands
 
