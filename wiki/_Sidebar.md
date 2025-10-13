@@ -8,6 +8,18 @@
 
 **Agents** (12 total)
 - [Agents Overview](Agents-Overview)
+- [Frontend Development](Frontend-Development-Agent)
+- [Forms Workflow](Forms-Workflow-Agent)
+- [Content & SEO](Content-SEO-Agent)
+- [Azure Serverless](Azure-Serverless-Agent)
+- [DevOps Azure](DevOps-Azure-Agent)
+- [DevOps Railway](DevOps-Railway-Agent)
+- [Monitoring & Observability](Monitoring-Observability-Agent)
+- [Testing & Quality](Testing-Quality-Agent)
+- [Security & Production](Security-Production-Agent)
+- [Accessibility & Compliance](Accessibility-Compliance-Agent)
+- [Authentication](Authentication-Agent)
+- [Code Review](Code-Review-Agent)
 
 **Commands** (81 total)
 - [Commands Overview](Commands-Overview)

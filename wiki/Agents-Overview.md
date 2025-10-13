@@ -20,68 +20,68 @@ Agents are specialized AI assistants with deep knowledge in specific areas of we
 
 ### Frontend & UI
 
-1. **Frontend Development Agent**
+1. **[Frontend Development Agent](Frontend-Development-Agent)**
    - React, TypeScript, Bootstrap
    - Responsive design and accessibility
    - Component architecture
 
-2. **Forms Workflow Agent**
+2. **[Forms Workflow Agent](Forms-Workflow-Agent)**
    - Form creation and validation
    - Multi-step workflows
    - File upload handling
 
-3. **Content & SEO Agent**
+3. **[Content & SEO Agent](Content-SEO-Agent)**
    - SEO optimization
    - Content management
    - Structured data and metadata
 
 ### Backend & Cloud
 
-4. **Azure Serverless Agent**
+4. **[Azure Serverless Agent](Azure-Serverless-Agent)**
    - Azure Functions development
    - Azure Table Storage
    - Azure services integration
 
-5. **DevOps Azure Agent**
+5. **[DevOps Azure Agent](DevOps-Azure-Agent)**
    - Azure deployment
    - GitHub Actions CI/CD
    - Azure infrastructure
 
-6. **DevOps Railway Agent**
+6. **[DevOps Railway Agent](DevOps-Railway-Agent)**
    - Railway deployment
    - PostgreSQL and Prisma
    - Railway platform optimization
 
 ### Quality & Operations
 
-7. **Monitoring & Observability Agent**
+7. **[Monitoring & Observability Agent](Monitoring-Observability-Agent)**
    - Application monitoring
    - Performance tracking
    - Error logging and alerting
 
-8. **Testing & Quality Agent**
+8. **[Testing & Quality Agent](Testing-Quality-Agent)**
    - Unit and integration testing
    - E2E testing with Playwright
    - Test coverage and quality assurance
 
-9. **Security & Production Agent**
+9. **[Security & Production Agent](Security-Production-Agent)**
    - Security audits and best practices
    - Production readiness
    - Vulnerability scanning
 
-10. **Accessibility & Compliance Agent**
+10. **[Accessibility & Compliance Agent](Accessibility-Compliance-Agent)**
     - WCAG 2.1 AA compliance
     - Accessibility testing
     - ARIA and semantic HTML
 
 ### Features & Authentication
 
-11. **Authentication Agent**
+11. **[Authentication Agent](Authentication-Agent)**
     - User authentication flows
     - OAuth and social login
     - Session management and RBAC
 
-12. **Code Review Agent**
+12. **[Code Review Agent](Code-Review-Agent)**
     - Automated code review
     - 10 review categories
     - Pre-deployment quality gates
